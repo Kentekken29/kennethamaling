@@ -1,0 +1,40 @@
+<section id="contact" class="border-t-4 border-charcoal py-16 dark:border-cream md:py-24">
+  <div class="reveal mx-auto max-w-3xl px-4 md:px-8">
+    <h2 class="font-display text-3xl font-black md:text-5xl">Say hello</h2>
+    <p class="mt-4 text-lg">Have an IT issue, or just want to say hi?</p>
+
+    <form class="mt-8 space-y-5" novalidate>
+      <div>
+        <label for="name" class="mb-1 block text-sm font-bold">Name</label>
+        <input
+          id="name" name="name" type="text" required autocomplete="name"
+          placeholder="Your name"
+          class="w-full border-4 border-charcoal bg-white px-4 py-3 text-charcoal
+                 focus:outline-none focus:ring-4 focus:ring-basil
+                 dark:border-cream dark:bg-charcoal dark:text-cream" />
+      </div>
+
+      <div>
+        <label for="email" class="mb-1 block text-sm font-bold">Email</label>
+        <input
+          id="email" name="email" type="email" required autocomplete="email"
+          placeholder="you@example.com"
+          class="w-full border-4 border-charcoal bg-white px-4 py-3 text-charcoal
+                 focus:outline-none focus:ring-4 focus:ring-basil
+                 dark:border-cream dark:bg-charcoal dark:text-cream" />
+      </div>
+
+      <div>
+        <label for="message" class="mb-1 block text-sm font-bold">Message</label>
+        <textarea
+          id="message" name="message" rows="4" required
+          placeholder="How can I help you?"
+          class="w-full border-4 border-charcoal bg-white px-4 py-3 text-charcoal
+                 focus:outline-none focus:ring-4 focus:ring-basil
+                 dark:border-cream dark:bg-charcoal dark:text-cream"></textarea>
+      </div>
+
+      <button type="submit" class="btn-brutal">Send message</button>
+    </form>
+  </div>
+</section>

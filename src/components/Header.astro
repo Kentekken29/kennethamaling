@@ -1,0 +1,43 @@
+---
+// Header.astro
+---
+
+<header class="sticky top-0 z-40 border-b-4 border-charcoal bg-cream/95 backdrop-blur dark:border-cream dark:bg-charcoal/95">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+
+    <a href="#hero" class="font-display text-2xl font-black tracking-tight md:text-3xl">
+      🍕 Pizzaria
+    </a>
+
+    <ul class="hidden gap-6 text-sm font-bold md:flex">
+      <li><a href="#about"    class="hover:text-tomato dark:hover:text-tomato">About</a></li>
+      <li><a href="#services" class="hover:text-tomato dark:hover:text-tomato">Services</a></li>
+      <li><a href="#menu"     class="hover:text-tomato dark:hover:text-tomato">Menu</a></li>
+      <li><a href="#contact"  class="hover:text-tomato dark:hover:text-tomato">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" class="btn-brutal !px-3 !py-1.5 text-xs md:text-sm" type="button" aria-label="Toggle dark mode">
+        🌙
+      </button>
+    </div>
+
+  </nav>
+</header>
+
+<script>
+
+  const root = document.documentElement;
+  const themeToggle = document.getElementById("theme-toggle");
+
+  // Check if dark mode was previously enabled
+  if (localStorage.getItem("pizzaria-theme") === "dark") {
+    root.classList.add("dark");
+  }
+
+  // Toggle dark mode on button click
+  themeToggle?.addEventListener("click", () => {
+    root.classList.toggle("dark");
+    localStorage.setItem("pizzaria-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+</script>
