@@ -17,9 +17,11 @@ const position = "IT Support Specialist";
 		<meta name="generator" content={Astro.generator} />
 		<title>Kenneth A. Maling | {position}</title>
 	</head>
-	<body>
+	<body class="min-h-screen bg-cream text-charcoal transition-colors dark:bg-charcoal dark:text-cream">
+		<div id="scroll-progress" class="fixed inset-x-0 top-0 z-50 h-1 origin-left bg-tomato" style="transform: scaleX(0)" aria-hidden="true"></div>
 		<Header />
 		<slot />
 		<Footer />
 	</body>
+	<script src="../scripts/animation.js"></script>
 </html>

@@ -1,3 +1,32 @@
 @import "tailwindcss";
 
+@theme {
+  --color-charcoal: #1f1f1f;
+  --color-cream: #fff8e7;
+  --color-tomato: #e4573d;
+  --color-basil: #3a7d61;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
+
+.btn-brutal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--color-charcoal);
+  background-color: var(--color-tomato);
+  color: var(--color-cream);
+  font-weight: 800;
+  box-shadow: 4px 4px 0 var(--color-charcoal);
+  cursor: pointer;
+}
+
+.btn-brutal:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-charcoal);
+}
+
+.btn-brutal:focus-visible {
+  outline: 3px solid var(--color-basil);
+  outline-offset: 3px;
+}
